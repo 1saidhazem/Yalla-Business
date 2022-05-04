@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:ads="http://schemas.android.com/apk/res-auto"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:scrollbarAlwaysDrawVerticalTrack="true"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="730dp"
+        >
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar_back"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentEnd="true"
+            ads:titleTextColor="@color/white"
+            ads:titleTextAppearance="@style/styleToolBar"
+            android:background="#8476F6" />
+
+        <TextView
+            android:id="@+id/screen_details_tv_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="اسم المشروع"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/toolbar_back" />
+
+
+        <TextView
+            android:id="@+id/screen_details_tv_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/cairo_light"
+            android:text="وصف المشروع"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/screen_details_tv_name"
+            android:layout_alignParentEnd="true"/>
+
+        <TextView
+            android:id="@+id/screen_details_tv_cost"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/cairo_bold"
+            android:text="التكلفة"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:layout_below="@id/screen_details_tv_description"
+            android:layout_alignParentEnd="true"
+            />
+
+        <TextView
+            android:id="@+id/screen_details_tv_cost_info"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="18dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="18dp"
+            android:fontFamily="@font/cairo_light"
+            android:text="تكلفة المشروع"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:layout_below="@id/screen_details_tv_cost"
+            android:layout_alignParentEnd="true"
+            />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/screen_details_tv_cost_info"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            >
+
+            <com.google.android.gms.ads.AdView
+                android:id="@+id/adView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                ads:adSize="SMART_BANNER"
+                ads:adUnitId="ca-app-pub-3940256099942544/6300978111"
+                ads:layout_constraintBottom_toBottomOf="parent"
+                ads:layout_constraintEnd_toEndOf="parent"
+                ads:layout_constraintStart_toStartOf="parent"
+                ads:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+
+
+    </RelativeLayout>
+
+
+</ScrollView>
